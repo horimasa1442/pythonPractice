@@ -13,3 +13,14 @@ def readFromCameraV2(path):
 
             cameraNum = int(line)
             flag = False
+
+        print(cameraNum)
+
+        line = f.readline().rstrip('\r\n')
+
+        for i in range(cameraNum):
+            fName = f.readline().rstrip('\r\n')
+            line = f.readline().rstrip('\r\n')
+
+            line = f.readline.rstrip('\r\n').split(' ')
+            for line in
