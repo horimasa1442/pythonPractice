@@ -7,6 +7,9 @@ def readFromCameraV2(path):
 
         while flag:
             line = f.readline().rstrip('\r\n')
-            
-            
-        
+
+            if (not line) or (line[0] == '#'):
+                continue
+
+            cameraNum = int(line)
+            flag = False
