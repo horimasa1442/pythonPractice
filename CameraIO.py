@@ -1,5 +1,6 @@
 from Params import *
 import numpy as np
+from HelperFunc import *
 
 def readFromCameraV2(path):
     with open(path) as f:
@@ -22,5 +23,7 @@ def readFromCameraV2(path):
             fName = f.readline().rstrip('\r\n')
             line = f.readline().rstrip('\r\n')
 
-            line = f.readline.rstrip('\r\n').split(' ')
-            for line in
+            flength = str2floatList(f.readline.rstrip('\r\n'), ' ')
+            pPoint = str2floatList(f.readline.rstrip('\r\n'), ' ')
+            trans = np.asarray(str2floatList(f.readline.rstrip('\r\n'), ' '))
+            
